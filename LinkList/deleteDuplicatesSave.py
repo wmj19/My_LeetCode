@@ -5,8 +5,7 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-from typing import Optional
-from ListNode import ListNode
+from all_package import *
 
 class Solution:
     def deleteDuplicatesSave(self, head: Optional[ListNode]) -> Optional[ListNode]:

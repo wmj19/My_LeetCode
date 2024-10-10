@@ -1,5 +1,4 @@
-from typing import Optional
-from ListNode import ListNode
+from all_package import *
 
 # 使用两个指针，pre指向前驱，cur指向当前节点
 # cur指向的节点如果和后续值相同，则往后遍历
