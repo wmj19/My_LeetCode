@@ -20,4 +20,4 @@ class Solution:
                 break
             num = num.next
 
-        return head
+        return head 
