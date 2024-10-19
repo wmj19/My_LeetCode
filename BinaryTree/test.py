@@ -1,4 +1,6 @@
 import structure.BinaryTree
+from BinaryTree.Solutions.IsSameTree import is_same_tree
+from BinaryTree.Solutions.IsSymmetric import is_symmetric
 from BinaryTree.structure.BinaryTree import *
 from BinaryTree.utils import *
 from Solutions.MergeTrees import *
@@ -36,3 +38,34 @@ print_list(res_preorder)
 print("mark_postorder_traversal".center(40, '='))
 res_postorder = mark_postorder_traversal(tree1.root)
 print_list(res_postorder)
+
+print("is_same_tree".center(40, '='))
+same_tree1 = BinaryTree()
+same_tree1.root = TreeNode(1)
+same_tree1.left_insert(same_tree1.root, 2)
+# same_tree1.right_insert(same_tree1.root, 3)
+same_tree2 = BinaryTree()
+same_tree2.root = TreeNode(1)
+#same_tree1.left_insert(same_tree2.root, 2)
+#same_tree1.right_insert(same_tree2.root, 3)
+same_tree1.right_insert(same_tree2.root, 2)
+
+res = is_same_tree(same_tree1.root, same_tree2.root)
+if res:
+    print("tree1 and tree2 is same tree")
+else:
+    print("tree1 and tree2 is different")
+
+print("is_symmetric".center(40, '='))
+tree_symmetric = BinaryTree()
+tree_symmetric.root = TreeNode(1)
+tree_symmetric.left_insert(tree_symmetric.root, 2)
+tree_symmetric.left_insert(tree_symmetric.root.left, 3)
+tree_symmetric.right_insert(tree_symmetric.root.left, 4)
+tree_symmetric.right_insert(tree_symmetric.root, 2)
+tree_symmetric.right_insert(tree_symmetric.root.right, 3)
+tree_symmetric.left_insert(tree_symmetric.root.right, 4)
+if is_symmetric(tree_symmetric.root):
+    print("symmetric")
+else:
+    print("not symmetric")
