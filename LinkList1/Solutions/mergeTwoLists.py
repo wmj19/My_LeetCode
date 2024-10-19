@@ -1,5 +1,6 @@
 from typing import Optional
-from LinkList1.test import ListNode
+
+from LinkList1.structure.ListNode import ListNode
 
 
 def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:

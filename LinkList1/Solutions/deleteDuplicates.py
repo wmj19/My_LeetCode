@@ -1,5 +1,6 @@
 from typing import Optional
-from LinkList1.test import ListNode
+
+from LinkList1.structure.ListNode import ListNode
 
 
 # 使用两个指针，pre指向前驱，cur指向当前节点

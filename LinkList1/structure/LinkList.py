@@ -1,6 +1,10 @@
-from ListNode import ListNode
 from LinkList1.Solutions.deleteDuplicates import deleteDuplicates
 from LinkList1.Solutions.deleteDuplicatesSave import deleteDuplicatesSave
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 class LinkList:
     def __init__(self):

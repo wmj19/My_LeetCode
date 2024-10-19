@@ -1,5 +1,6 @@
 from typing import Optional
-from LinkList1.test import ListNode
+
+from LinkList1.structure.ListNode import ListNode
 
 
 def partition(head: Optional[ListNode], x: int) -> Optional[ListNode]:

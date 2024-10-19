@@ -2,7 +2,8 @@
 # 给定一个已排序的链表的头 head ，
 # 删除所有重复的元素，使每个元素只出现一次 。返回 已排序的链表 。
 from typing import Optional
-from LinkList1.test import ListNode
+
+from LinkList1.structure.ListNode import ListNode
 
 
 def deleteDuplicatesSave(head: Optional[ListNode]) -> Optional[ListNode]:
