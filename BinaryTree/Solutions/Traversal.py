@@ -1,3 +1,4 @@
+from tempfile import template
 from typing import Optional
 
 from BinaryTree.structure.TreeNode import TreeNode
@@ -58,5 +59,20 @@ def mark_postorder_traversal(root:Optional[TreeNode]):
             stack.append((WHITE, node.left))
         else:
             res.append(node.val)
+
+    return res
+
+def level_traversal(root:Optional[TreeNode]):
+    queue = [root]
+    temp = []
+    res = []
+
+    while queue:
+        for node in queue:
+            res.append(node.val)
+            if node.left: temp.append(node.left)
+            if node.right: temp.append(node.right)
+        queue = temp
+        temp =[]
 
     return res
