@@ -3,6 +3,7 @@ from BinaryTree.Solutions.IsBalanced import is_balanced
 from BinaryTree.Solutions.IsSameTree import is_same_tree
 from BinaryTree.Solutions.IsSymmetric import is_symmetric
 from BinaryTree.Solutions.MaxDepth import max_depth
+from BinaryTree.Solutions.MinDepth import min_depth
 from BinaryTree.Solutions.sorted_array_to_BST import sorted_array_to_BST
 from BinaryTree.structure.BinaryTree import *
 from BinaryTree.utils import *
@@ -120,9 +121,17 @@ tree_is_balanced.left_insert(tree_is_balanced.root.left, 15)
 tree_is_balanced.left_insert(tree_is_balanced.root.left.left, 15)
 tree_is_balanced.right_insert(tree_is_balanced.root.left, 7)
 tree_is_balanced.right_insert(tree_is_balanced.root.left.left, 7)
-
 res = is_balanced(tree_is_balanced.root)
 if res:
     print("true")
 else:
     print("false")
+
+print("min_depth".center(40, '='))
+tree_min_depth = BinaryTree()
+tree_min_depth.root = TreeNode(2)
+tree_min_depth.right_insert(tree_min_depth.root, 3)
+tree_min_depth.right_insert(tree_min_depth.root.right, 4)
+tree_min_depth.right_insert(tree_min_depth.root.right.right, 5)
+min_depth = min_depth(tree_min_depth.root)
+print(f"tree_min_depth's depth = {min_depth}")
