@@ -1,4 +1,5 @@
 import structure.BinaryTree
+from BinaryTree.Solutions.IsBalanced import is_balanced
 from BinaryTree.Solutions.IsSameTree import is_same_tree
 from BinaryTree.Solutions.IsSymmetric import is_symmetric
 from BinaryTree.Solutions.MaxDepth import max_depth
@@ -97,3 +98,31 @@ print("sorted_array_to_BST".center(40, '='))
 bst_tree = sorted_array_to_BST([-10, -3, 0, 5, 9])
 inorder_res = level_traversal(bst_tree)
 print_list(inorder_res)
+
+print("is_balanced".center(40, '='))
+# tree_is_balanced = BinaryTree()
+# tree_is_balanced.root = TreeNode(1)
+# tree_is_balanced.left_insert(tree_is_balanced.root, 2)
+# tree_is_balanced.left_insert(tree_is_balanced.root.left, 2)
+# tree_is_balanced.left_insert(tree_is_balanced.root.left.left, 2)
+# tree_is_balanced.right_insert(tree_is_balanced.root, 3)
+# tree_is_balanced = BinaryTree()
+# tree_is_balanced.root = TreeNode(3)
+# tree_is_balanced.left_insert(tree_is_balanced.root, 9)
+# tree_is_balanced.right_insert(tree_is_balanced.root, 20)
+# tree_is_balanced.left_insert(tree_is_balanced.root.right, 15)
+# tree_is_balanced.right_insert(tree_is_balanced.root.right, 7)
+tree_is_balanced = BinaryTree()
+tree_is_balanced.root = TreeNode(3)
+tree_is_balanced.left_insert(tree_is_balanced.root, 9)
+tree_is_balanced.right_insert(tree_is_balanced.root, 20)
+tree_is_balanced.left_insert(tree_is_balanced.root.left, 15)
+tree_is_balanced.left_insert(tree_is_balanced.root.left.left, 15)
+tree_is_balanced.right_insert(tree_is_balanced.root.left, 7)
+tree_is_balanced.right_insert(tree_is_balanced.root.left.left, 7)
+
+res = is_balanced(tree_is_balanced.root)
+if res:
+    print("true")
+else:
+    print("false")
