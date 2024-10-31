@@ -1,4 +1,5 @@
 from LinkList1.Solutions import deleteDuplicates
+from LinkList1.Solutions.Solutions import Solution
 from LinkList1.structure.LinkList import LinkList, traverse
 
 
@@ -19,3 +20,23 @@ print("after delete duplicates")
 res = deleteDuplicates(link_list_delete_duplicates.head)
 traverse(res)
 
+print("reverse list".center(40, "="))
+link_reverse_list = LinkList()
+link_reverse_list.insert(1)
+link_reverse_list.insert(2)
+link_reverse_list.insert(3)
+link_reverse_list.insert(4)
+link_reverse_list.insert(5)
+link_reverse_list.insert(6)
+res = Solution().reverse_list(link_reverse_list.head)
+traverse(res)
+
+print("is plain drome".center(40, '='))
+link_plain_drome = LinkList()
+link_plain_drome.insert(1)
+link_plain_drome.insert(2)
+link_plain_drome.insert(3)
+link_plain_drome.insert(2)
+link_plain_drome.insert(1)
+res = Solution().is_palindrome(link_plain_drome.head)
+print(res)
