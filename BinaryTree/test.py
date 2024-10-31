@@ -1,4 +1,8 @@
+from PyQt5.QtCore import center
+
 import structure.BinaryTree
+from BinaryTree.Solutions.CountOfNodes import count_nodes
+from BinaryTree.Solutions.HasPathSum import has_path_sum
 from BinaryTree.Solutions.IsBalanced import is_balanced
 from BinaryTree.Solutions.IsSameTree import is_same_tree
 from BinaryTree.Solutions.IsSymmetric import is_symmetric
@@ -135,3 +139,15 @@ tree_min_depth.right_insert(tree_min_depth.root.right, 4)
 tree_min_depth.right_insert(tree_min_depth.root.right.right, 5)
 min_depth = min_depth(tree_min_depth.root)
 print(f"tree_min_depth's depth = {min_depth}")
+
+print("has_path_sum".center(40, '='))
+tree_has_path_sum = BinaryTree()
+tree_has_path_sum.root = TreeNode(1)
+tree_has_path_sum.left_insert(tree_has_path_sum.root, 2)
+tree_has_path_sum.right_insert(tree_has_path_sum.root, 3)
+res = has_path_sum(tree_has_path_sum.root, 3)
+print(res)
+
+print("count_of_node".center(40, '='))
+res = count_nodes(tree_has_path_sum.root)
+print(res)
