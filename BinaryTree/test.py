@@ -8,6 +8,7 @@ from BinaryTree.Solutions.IsSameTree import is_same_tree
 from BinaryTree.Solutions.IsSymmetric import is_symmetric
 from BinaryTree.Solutions.MaxDepth import max_depth
 from BinaryTree.Solutions.MinDepth import min_depth
+from BinaryTree.Solutions.Solutions import Solutions
 from BinaryTree.Solutions.sorted_array_to_BST import sorted_array_to_BST
 from BinaryTree.structure.BinaryTree import *
 from BinaryTree.utils import *
@@ -151,3 +152,13 @@ print(res)
 print("count_of_node".center(40, '='))
 res = count_nodes(tree_has_path_sum.root)
 print(res)
+
+print("all path".center(40, '='))
+tree_all_path = BinaryTree()
+tree_all_path.root = TreeNode(1)
+tree_all_path.left_insert(tree_all_path.root, 2)
+tree_all_path.right_insert(tree_all_path.root, 3)
+tree_all_path.right_insert(tree_all_path.root.left, 5)
+res = Solutions().binary_tree_paths(tree_all_path.root)
+for ele in res:
+    print(ele)

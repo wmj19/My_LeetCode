@@ -31,3 +31,13 @@ class Solution:
         # return True
 
         return value == value[::-1]
+
+    def middle_node(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        quick, slow = ListNode(), ListNode()
+        quick.next, slow.next = head, head
+        while quick:
+            slow = slow.next
+            quick = quick.next
+            if quick:
+                quick = quick.next
+        return  slow
