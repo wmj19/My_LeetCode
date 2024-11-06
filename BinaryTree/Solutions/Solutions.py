@@ -23,7 +23,7 @@ class Solutions:
         self.preorder_traversal(root, '', res)
         return res
 
-
+    # 404题
     def sum_of_left_leaves(self, root: Optional[TreeNode]) -> int:
         LEFT, RIGHT, ROOT = 0, 1, 2
         queue = collections.deque()
@@ -48,6 +48,7 @@ class Solutions:
             inorder_list.append(root.val)
             self.inorder_traversal(root.right, inorder_list)
 
+    # 501题
     def find_mode(self, root: Optional[TreeNode]) -> List[int]:
         lst = []
         self.inorder_traversal(root, lst)
