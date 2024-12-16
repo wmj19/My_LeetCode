@@ -1,13 +1,13 @@
 from typing import Optional
-
 from BinaryTree.structure.TreeNode import TreeNode
-def max_depth(root: Optional[TreeNode]):
+
+
+def min_depth(root: Optional[TreeNode]) -> int:
     if root is None:
         return 0
-
     queue = [root]
-    depth = 0
     temp = []
+    min_depth = 1
 
     while queue:
         for node in queue:
@@ -15,8 +15,10 @@ def max_depth(root: Optional[TreeNode]):
                 temp.append(node.left)
             if node.right:
                 temp.append(node.right)
+            if node.left is None and node.right is None:
+                return min_depth
         queue = temp
         temp = []
-        depth += 1
+        min_depth += 1
 
-    return depth
+    return min_depth
