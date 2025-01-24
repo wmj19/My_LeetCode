@@ -34,6 +34,12 @@ class Solutions:
         # 这个数字只要以0为结尾反转两次后一定不是和原数字相同的，只要不以0为结尾就一定是相同的
         return num % 10 > 0 or num == 0
 
+    # 509.斐波那契数列
+    def fib(self, n: int) -> int:
+        if n < 2:
+            return n
+        return self.fib(n - 1) + self.fib(n - 2)
+
 def isSelfDividingNumber(num: int) -> bool:
     temp = num
     while temp:
@@ -63,3 +69,6 @@ if __name__ == '__main__':
     print(Solutions().selfDividingNumbers(47, 85))
     print("反转两次的数字".center(20, '='))
     print(Solutions().isSameAfterReversals(12300))
+    print("斐波那契数列".center(20, '='))
+    print(Solutions().fib(3))
+
